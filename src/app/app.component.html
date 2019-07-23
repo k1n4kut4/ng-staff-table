@@ -6,30 +6,31 @@
 
     <form [formGroup]="staffForm" role="form">
 
-      <mat-form-field>   
+        <mat-form-field>   
 
-        <input matInput name="name" placeholder="Name" formControlName="name" required>
+          <input matInput name="name" placeholder="Name" formControlName="name" required>
+          <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
 
-      </mat-form-field>     
+        </mat-form-field>     
 
-      <mat-form-field>  
+        <mat-form-field>  
 
-        <input matInput name="company" placeholder="Company" formControlName="company" required> 
+          <input matInput name="company" placeholder="Company" formControlName="company" required> 
 
-      </mat-form-field>  
+        </mat-form-field>  
 
-      <mat-form-field>  
+        <mat-form-field>  
 
-        <mat-select name="gender" placeholder="Gender (Male of Female)" formControlName="gender" required> 
-            <mat-option value="" disabled selected>Select Gender</mat-option>
-            <mat-option  *ngFor="let gender of genders" [value]="gender.gender_id">{{gender.gender}}</mat-option>
-        </mat-select>  
+          <mat-select name="gender" placeholder="Gender (Male of Female)" formControlName="gender" required> 
+              <mat-option value="" disabled selected>Select Gender</mat-option>
+              <mat-option  *ngFor="let gender of genders" [value]="gender.gender_id">{{gender.gender}}</mat-option>
+          </mat-select>  
 
-      </mat-form-field>   
+        </mat-form-field>   
 
-      <button mat-raised-button (click)="addStaff()" color="primary">Create</button>
+        <button mat-raised-button (click)="addStaff()" color="primary" [disabled]="!staffForm.valid">Create</button>
 
-  </form>  
+    </form>  
 
   </mat-card-content> 
 </mat-card>

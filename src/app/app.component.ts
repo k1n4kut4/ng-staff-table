@@ -16,9 +16,9 @@ const ELEMENT_DATA: dataElement[] = [];
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-staff-table';
-
   public staffForm: FormGroup;
+  
+  title = 'ngstafftable'; 
 
   genders = [
     {gender_id: 0, gender: 'Male'},
@@ -33,10 +33,14 @@ export class AppComponent {
 
   ngOnInit() {
     this.staffForm = new FormGroup({
-      name: new FormControl(''),
-      company: new FormControl(''),
-      gender: new FormControl(''),
+      name: new FormControl('', [Validators.required, Validators.maxLength(60)]),
+      company: new FormControl('', [Validators.required, Validators.maxLength(60)]),
+      gender: new FormControl('', [Validators.required])
     });
+  }
+
+  public hasError = (controlName: string, errorName: string) =>{
+    return this.staffForm.controls[controlName].hasError(errorName);
   }
 
   addStaff() { 
@@ -52,5 +56,4 @@ export class AppComponent {
     }
 
   } 
-
 }
