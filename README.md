@@ -1,4 +1,4 @@
-# ngstafftable
+# ng-staff-table
 
 ![actual](./img/i2n-frontend-actual.png) 
 
