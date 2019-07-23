@@ -18,7 +18,7 @@ const ELEMENT_DATA: dataElement[] = [];
 export class AppComponent {
   public staffForm: FormGroup;
   
-  title = 'ngstafftable'; 
+  title = 'ng-staff-table'; 
 
   genders = [
     {gender_id: 0, gender: 'Male'},
