@@ -18,6 +18,11 @@ const ELEMENT_DATA: dataElement[] = [];
 export class AppComponent {
   title = 'ng-staff-table';
 
+  genders = [
+    {gender_id: 0, gender: 'Male'},
+    {gender_id: 1, gender: 'Female'}
+  ];
+
   displayedColumns: string[] = ['Name', 'Company', 'Gender'];
   columnsToDisplay: string[] = this.displayedColumns;
   data: dataElement[] = ELEMENT_DATA; 
