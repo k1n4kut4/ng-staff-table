@@ -8,11 +8,7 @@ export interface dataElement {
   Gender: string;
 }  
 
-const ELEMENT_DATA: dataElement[] = [{
-  Name: "test string",
-  Company: "test string",
-  Gender: "test string"
-}];
+const ELEMENT_DATA: dataElement[] = [];
 
 @Component({
   selector: 'app-root',
