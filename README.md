@@ -8,7 +8,7 @@ I’ll use Angular Material... array as data source.... renderRows after updatin
 
 Table on test is always empty on load, naturally, as the data souce array is empty.
 
-You do not request any TDD, and I was rushing to achieve the 30 minutes limit, but I am quickly seeing if I can add some tests with Karma. Ideally need a test of whether from will update table. Could refactor to have form variables passed to a function, then that function can be given sample data, which would expand the table 
+You do not request any TDD, and I was rushing to achieve the 30 minutes limit, but I am quickly seeing if I can add some tests with Karma. Ideally need a test of whether form will update table. Could refactor to have form variables passed to a function, then that function can be given sample data, which would expand the table 
 
 ![actual](./img/jasmine.png) 
 
